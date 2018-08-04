@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ ! -d ./.git/hooks/script ];then
+	exit 0
+fi
+
+for file in $(ls ./.git/hooks/script/commit-msg.script)
+do
+        ./.git/hooks/script/commit-msg.script/$file $*
+	if [ $? -ne 0 ];then
+		exit 1
+	fi
+done

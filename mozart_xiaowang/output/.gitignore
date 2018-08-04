@@ -1,0 +1,7 @@
+mozart/
+target/
+host/
+usrdata/
+fs/
+updatepkg
+molib
